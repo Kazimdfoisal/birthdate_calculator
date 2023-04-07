@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(57, 52, 61);
+    background-color: rgb(178, 213, 233);
 }
 
 #wrapper{
@@ -22,7 +22,7 @@ body{
     padding: 25px;
     border-radius: 10px;
     border-bottom-right-radius: 80px;
-    background-color: rgb(226, 236, 231);
+    background-color: rgb(255, 255, 255);
 }
 
 .dataEntry{
@@ -74,15 +74,14 @@ gap: 30px;
 }
 
 #msgDay,#msgMonth,#msgYear{
-    font-size: smaller;
+    font-size: 13px;
     color: red;
 }
 
 @media screen and (max-width :771px){
     body{
          min-width: 300px;
-         background-color: rgb(57, 52, 61);
-
+         background-color: rgb(178, 213, 233);
     }
     
     #wrapper{
