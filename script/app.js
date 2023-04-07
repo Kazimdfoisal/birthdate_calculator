@@ -15,28 +15,34 @@ function validateBirthDate({
     month,
     year
 }) {
-    var messageLabelEl = document.getElementById("msg");
+    var messageLabelDayEl = document.getElementById("msgDay");
+    var messageLabelMonthEl = document.getElementById("msgMonth");
+    var messageLabelYearEl = document.getElementById("msgYear");
+
+
 
     /* TODO: Move logic to switch case */
     if (day == "" || month == "" || year == "") {
         return false;
     }
     else if (day >= "32" || day <= "0") {
-        messageLabelEl.innerText = "Days (1-31)";
+        messageLabelDayEl.innerText = "Days (1-31)";
         return false;
-
     }
     else if (month >= "13" || month <= "0") {
-        messageLabelEl.innerText = "Months 1-12";
+        messageLabelMonthEl.innerText = "Months 1-12";
         return false;
-
     }
     else if (year >= "3001" || year <= "1899") {
-        messageLabelEl.innerText = "Years 1900-3000";
+        messageLabelYearEl.innerText = "Years 1900-3000";
         return false;
     }
 
-    messageLabelEl.innerText = "";
+    messageLabelDayEl.innerText = "";
+    messageLabelMonthEl.innerText = "";
+    messageLabelYearEl.innerText = "";
+
+
     return true;
 }
 

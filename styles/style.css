@@ -20,6 +20,7 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 25px;
     border-radius: 10px;
+    border-bottom-right-radius: 80px;
 }
 
 .dataEntry{
@@ -64,14 +65,15 @@ gap: 30px;
 }
 
 #ageShow{
-    font-size:xx-large;
+    font-size:40px;
     font-weight: 900;
     color: rgb(108, 145, 226);
- 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#msg{
+#msgDay,#msgMonth,#msgYear{
     font-size: smaller;
+    color: red;
 }
 
 
