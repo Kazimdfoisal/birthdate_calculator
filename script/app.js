@@ -13,7 +13,9 @@ window.addEventListener("load", () => {
 function validateBirthDate({
     day,
     month,
-    year
+    year,
+    isLeapYear
+    
 }) {
     var messageLabelDayEl = document.getElementById("msgDay");
     var messageLabelMonthEl = document.getElementById("msgMonth");
@@ -23,6 +25,9 @@ function validateBirthDate({
 
     /* TODO: Move logic to switch case */
     if (day == "" || month == "" || year == "") {
+        return false;
+    }
+    else if (isLeapYear) {
         return false;
     }
     else if (day >= "32" || day <= "0") {
@@ -53,6 +58,7 @@ function calculateBirthDate({ day, month, year }) {
     let currMonth = 1 + today.getMonth();
     let currYear = today.getFullYear();
     const isLeapYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+
     const monthDays = [31, isLeapYear ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     if (day > currDay) {
@@ -77,6 +83,7 @@ function calculateBirthDate({ day, month, year }) {
         days,
         months,
         years,
+        isLeapYear
     }
 }
 
@@ -96,7 +103,7 @@ function getBirthDateValues() {
 age.addEventListener("click", () => {
     const userBirthDate = getBirthDateValues();
     console.log (userBirthDate);
-    const isUserBirthDateValid = validateBirthDate(userBirthDate)
+    const isUserBirthDateValid = validateBirthDate(userBirthDate);
     if (!isUserBirthDateValid) return;
 
     const calculatedUserAge = calculateBirthDate(userBirthDate);
