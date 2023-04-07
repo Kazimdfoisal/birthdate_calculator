@@ -78,4 +78,16 @@ gap: 30px;
     color: red;
 }
 
+@media screen and (max-width :771px){
+    body{
+         min-width: 300px;
+         background-color: rgb(57, 52, 61);
 
+    }
+    
+    #wrapper{
+        background-color: rgb(226, 236, 231);
+
+    }
+    
+}
